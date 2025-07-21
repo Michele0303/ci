@@ -9,8 +9,6 @@ func TestGetAPIKey_ValidHeader(t *testing.T) {
 	headers := http.Header{}
 	headers.Set("Authorization", "ApiKey test123")
 
-	t.Fatalf("expected no error, got %v", err)
-
 	apiKey, err := GetAPIKey(headers)
 	if err != nil {
 		t.Fatalf("expected no error, got %v", err)
